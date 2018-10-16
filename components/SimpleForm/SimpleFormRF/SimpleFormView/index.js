@@ -2,18 +2,18 @@ import { PropTypes } from 'prop-types';
 import React from 'react';
 import { Button, View } from 'react-native';
 
-const HelloFormView = ({ handleSubmit }) => (
+const SimpleFormView = ({ handleSubmit }) => (
   <View>
     <Button
-      title="Submit Hello"
+      title="Submit Simple"
       onPress={handleSubmit}
     />
   </View>
 ); 
 
-HelloFormView.propTypes = {
+SimpleFormView.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
 };
 
-export default HelloFormView;
+export default SimpleFormView;
 

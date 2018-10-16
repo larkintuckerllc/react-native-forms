@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
 import HelloForm from './components/HelloForm';
+import SimpleForm from './components/SimpleForm';
 
 const rootReducer = combineReducers({
   form: formReducer,
@@ -16,6 +17,7 @@ export default class App extends React.Component {
       <Provider store={store}>
         <View style={styles.container}>
           <HelloForm />
+          <SimpleForm />
         </View>
       </Provider>
     );

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
 import HelloFormRF from './HelloFormRF';
 
 class HelloForm extends Component {

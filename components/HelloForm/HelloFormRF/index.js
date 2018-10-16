@@ -1,7 +1,7 @@
 import { reduxForm } from 'redux-form';
 import HelloFormView from './HelloFormView';
 
-const FORM = 'todo';
+const FORM = 'hello';
 
 const HelloFormRF = reduxForm({
   form: FORM,
