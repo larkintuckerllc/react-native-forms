@@ -5,6 +5,7 @@ import { createStore, combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
 import HelloForm from './components/HelloForm';
 import SimpleForm from './components/SimpleForm';
+import SubmissionForm from './components/SubmissionForm';
 import ValidationForm from './components/ValidationForm';
 
 const rootReducer = combineReducers({
@@ -25,9 +26,11 @@ export default class App extends React.Component {
           <Button title="Hello Form" onPress={this.handlePressHello} />
           <Button title="Simple Form" onPress={this.handlePressSimple} />
           <Button title="ValidationForm" onPress={this.handlePressValidation} />
+          <Button title="Submission Form" onPress={this.handlePressSubmission} />
           {activeForm === 'hello' && <HelloForm />}
           {activeForm === 'simple' && <SimpleForm />}
           {activeForm === 'validation' && <ValidationForm />}
+          {activeForm === 'submission' && <SubmissionForm />}
         </View>
       </Provider>
     );
@@ -36,6 +39,8 @@ export default class App extends React.Component {
   handlePressHello = () => this.setState({ activeForm: 'hello' });
 
   handlePressSimple = () => this.setState({ activeForm: 'simple' });
+
+  handlePressSubmission = () => this.setState({ activeForm: 'submission' });
 
   handlePressValidation = () => this.setState({ activeForm: 'validation' });
 }
