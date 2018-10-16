@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import SimpleFormRF from './SimpleFormRF';
 
 class SimpleForm extends Component {
-  handleSubmit = () => {
-    console.log('SUBMITTED');
+  handleSubmit = ({ firstName, lastName }) => {
+    console.log(`firstname: ${firstName}`);
+    console.log(`lastName: ${lastName}`);
   }
 
   render() {
