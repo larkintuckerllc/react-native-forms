@@ -4,7 +4,7 @@ import { Button, View } from 'react-native';
 import { Field } from 'redux-form';
 import RFTextView from '../../../RFTextInput';
 
-const ValidationFormView = ({ handleSubmit }) => (
+const ValidationFormView = ({ handleSubmit, valid }) => (
   <View>
     <Field
       name="firstName"
@@ -15,6 +15,7 @@ const ValidationFormView = ({ handleSubmit }) => (
       component={RFTextView}
     />
     <Button
+      disabled={!valid}
       title="Submit Validation"
       onPress={handleSubmit}
     />
@@ -23,6 +24,7 @@ const ValidationFormView = ({ handleSubmit }) => (
 
 ValidationFormView.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
+  valid: PropTypes.bool.isRequired,
 };
 
 export default ValidationFormView;
