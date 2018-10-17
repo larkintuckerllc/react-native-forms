@@ -1,7 +1,7 @@
 import { reduxForm } from 'redux-form';
 import ResetFormView from './ResetFormView';
 
-const FORM = 'submission';
+const FORM = 'reset';
 
 const validate = ({ firstName, lastName }) => {
   const errors = {};

@@ -1,23 +1,13 @@
-import React, { Component } from 'react';
-import ResetFormRF from './ResetFormRF';
+import { connect } from 'react-redux';
+import { reset } from 'redux-form';
+import ResetFormSubmit from './ResetFormSubmit';
 
-const wait = () => new Promise((resolve) => {
-  setTimeout(() => {
-    resolve();
-  }, 3000);
-});
+const mapStateToProps = () => ({});
+const mapDispatchToProps = {
+  reset: () => reset('reset'),
+};
 
-class ResetForm extends Component {
-  handleSubmit = async ({ firstName, lastName }) => {
-    await wait();
-    // throw new Error(); // TEST Reset ERROR
-    console.log(`firstname: ${firstName}`);
-    console.log(`lastName: ${lastName}`);
-  }
-
-  render() {
-    return <ResetFormRF onSubmit={this.handleSubmit} />;
-  }
-}
-
-export default ResetForm;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ResetFormSubmit);

@@ -2,7 +2,7 @@ import { PropTypes } from 'prop-types';
 import React from 'react';
 import { Button, Text, View } from 'react-native';
 import { Field } from 'redux-form';
-import RFTextView from '../../../RFTextInput';
+import RFTextView from '../../../../RFTextInput';
 import styles from './styles';
 
 const ResetFormView = ({
